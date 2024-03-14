@@ -1,0 +1,29 @@
+{
+  "name": "dotalek-blog",
+  "version": "0.1.0",
+  "description": "dotalek's blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "sass src/static/scss:public/static/css --watch",
+    "build:sass": "sass src/static/scss:public/static/css",
+    "watch:eleventy": "npx eleventy --serve",
+    "build:eleventy": "ELEVENTY_ENV=development eleventy",
+    "start": "npm run watch:eleventy & npm run watch:sass",
+    "build": "npm run build:eleventy & npm run build:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotalek/blog.git"
+  },
+  "author": "dotalek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dotalek/blog/issues"
+  },
+  "homepage": "https://github.com/dotalek/blog#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "sass": "^1.72.0"
+  }
+}
